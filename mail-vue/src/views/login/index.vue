@@ -711,6 +711,11 @@ function submitRegister() {
   top: 6px;
 }
 
+/* 👇 就是这一行，永久隐藏 GitHub 图标 */
+.github {
+  display: none !important;
+}
+
 :deep(.el-input-group__append) {
   padding: 0 !important;
   padding-left: 8px !important;
