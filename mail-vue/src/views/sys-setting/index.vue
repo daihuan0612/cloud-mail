@@ -1120,6 +1120,11 @@ function getUpdate() {
     hasUpdate.value = data.name !== currentVersion
     getUpdateErrorCount = 0
   }).catch(e => {
+    // 自家仓库还没发布过 release（404），没什么可比的，安静退出：不打日志、不重试
+    if (e?.response?.status === 404) {
+      getUpdateErrorCount = 0
+      return
+    }
     getUpdateErrorCount++
     setTimeout(() => {
       getUpdate()
