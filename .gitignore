@@ -26,3 +26,16 @@ mail-vue/dist
 .wrangler
 .venv
 git-tools.js
+
+# 本地笔记/临时产物（不上仓库，仅本机自用）
+接手文档*.md
+交接文档*.md
+交接说明*.md
+HANDOVER*.md
+_backups/
+_shots/
+_archive/
+review-*.md
+_*.txt
+_*.diff
+_*.py
